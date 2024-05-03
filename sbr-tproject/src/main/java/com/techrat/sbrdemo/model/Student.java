@@ -1,5 +1,7 @@
 package com.techrat.sbrdemo.model;
 
+import org.hibernate.annotations.NaturalId;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,9 +27,11 @@ public class Student {
 	
 	private String lastName;
 	
+	@NaturalId(mutable = true)
 	private String email;
 	
 	private String department;
+
 	
 
 }
