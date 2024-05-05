@@ -1,13 +1,11 @@
 package com.techrat.sbrdemo.repository;
 
-import java.util.Optional;
-
+import com.techrat.sbrdemo.model.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.techrat.sbrdemo.model.Student;
+import java.util.Optional;
+
 
 public interface StudentRepository extends JpaRepository<Student, Long> {
-
-	Optional<Student> findByEmail(String email);
-
+    Optional<Student> findByEmail(String email);
 }
