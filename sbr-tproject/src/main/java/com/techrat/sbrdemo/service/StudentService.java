@@ -8,7 +8,6 @@ import com.techrat.sbrdemo.exception.StudentAlreadyExistsException;
 import com.techrat.sbrdemo.model.Student;
 import com.techrat.sbrdemo.repository.StudentRepository;
 
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 
@@ -16,7 +15,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class StudentService implements IStudentService {
 
-	private final StudentRepository studentRepository = null;
+	private final StudentRepository studentRepository;
 	@Override
 	public Student addStudent(Student student) {
 		if(studentAlreadyExists(student.getEmail())) {
